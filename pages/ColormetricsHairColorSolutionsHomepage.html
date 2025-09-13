@@ -2399,14 +2399,22 @@
         });
 
         // Touch events for mobile
-        slider1.addEventListener('touchstart', () => {
-            slider1.style.cursor = 'grabbing';
+        slider1.addEventListener("touchstart", (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - slider1.offsetLeft;
+            scrollLeft = slider1.scrollLeft;
         });
 
-        slider1.addEventListener('touchend', () => {
-            slider1.style.cursor = 'grab';
+        slider1.addEventListener("touchend", () => {
+            isDown = false;
         });
 
+        slider1.addEventListener("touchmove", (e) => {
+            if (!isDown) return;
+            const x = e.touches[0].pageX - slider1.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            slider1.scrollLeft = scrollLeft - walk;
+        });
 
     </script>
 
