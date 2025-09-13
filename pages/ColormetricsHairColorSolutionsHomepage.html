@@ -57,20 +57,33 @@
             width: 100%;
         }
 
-        section.hero-section:after {
+        /* section.hero-section:after {
             content: "";
-            background-image: url("../assets/images/img_group_pink_900.svg");
-            width: 544px;
-            height: 100%;
-            display: block;
             position: absolute;
-            left: 0;
             top: 0;
-            background-repeat: no-repeat;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background: url("../assets/images/img_group.svg") no-repeat left top;
+            background-size: auto 100%;
+            z-index: -1;
+            opacity: 0.8;
+        } */
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background: url("../assets/images/img_group.svg") no-repeat left top;
+            background-size: auto 100%;
+            z-index: -1;
+            opacity: 0.8;
         }
 
-
-        section.hero-section:before {
+        section.hero-section:after {
             content: "";
             background-image: url("../assets/images/img_group.svg");
             width: 250px;
@@ -82,9 +95,21 @@
             top: 0;
             background-repeat: no-repeat;
             z-index: -1;
-            /* keep it behind everything */
             opacity: 1;
         }
+
+        /* body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 544px;
+            height:100%;
+            background: url("../assets/images/img_group.svg") no-repeat left top;
+            background-size: auto;
+            z-index: -1;
+            opacity: 0.8;
+        } */
 
         .logo {
             width: 120px;
