@@ -70,12 +70,22 @@
         }
 
         .nav-item {
+            font-family: 'Roboto', sans-serif;
+            /* add a fallback */
             font-size: 20px;
             font-weight: 400;
+            /* "Regular" is just 400 */
+            font-style: normal;
+            /* instead of "Regular" */
+            line-height: 150%;
+            /* equivalent to 1.5 */
+            letter-spacing: 0;
+            /* 0px instead of 0% */
             color: #000000b2;
             text-decoration: none;
             transition: color 0.3s ease;
         }
+
 
         .nav-item.active {
             color: #a60f08;
@@ -112,6 +122,12 @@
 
         .header-actions .btn-outline {
             background: #fff;
+            border-color: #A60F08;
+            /* change to Figma color */
+            color: #A60F08;
+        }
+
+        .header-actions .btn .icon-down {
             border-color: #A60F08;
             /* change to Figma color */
             color: #A60F08;
@@ -209,7 +225,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px;
+            padding: 20px;
             position: relative;
             z-index: 2;
         }
@@ -714,10 +730,10 @@
         .image-slider-container {
             position: relative;
             width: 100%;
-            max-width: 500px;
+            max-width: 704px;
             border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
         }
 
         .before-after-image {
@@ -791,7 +807,7 @@
             max-width: 1280px;
             margin: 0 auto;
             padding: 80px 16px;
-            justify-content: center;
+            /* justify-content: center; */
             align-items: center;
             flex-direction: column;
             --position: 50%;
@@ -838,7 +854,7 @@
             color: white;
             border: none;
             padding: 16px 32px;
-            border-radius: 8px;
+            border-radius: 22px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
@@ -1266,7 +1282,7 @@
             margin: 0 auto;
             padding: 60px 20px;
             position: relative;
-            height: 874.6px;
+            max-height: 874.6px;
             border: 1px solid transparent;
             box-sizing: border-box;
             padding: 30px 16px;
@@ -1637,9 +1653,9 @@
             }
 
             .buy-now-btn {
-                width: 241.48px;
+                max-width: 241.48px;
                 /* from figma */
-                height: 63.49px;
+                max-height: 63.49px;
                 /* from figma */
             }
 
@@ -1720,7 +1736,8 @@
 
             .before-after-image {
                 flex: 0 0 auto;
-                max-width: 600px;
+                max-width: 704px;
+                max-height: 620px;
             }
 
             .before-after-container .before-after-content {
@@ -1795,13 +1812,24 @@
 
 <body>
     <header class="header"><img src="../assets/images/ColorMetrics logo.png" alt="Colormetrics Logo" class="logo" />
-        <nav class="nav-menu"><a href="#" class="nav-item active">Home</a><a href="#" class="nav-item">Shop</a><a
-                href="#" class="nav-item">About Us</a><a href="#" class="nav-item">Faqs</a></nav>
-        <div class="header-actions"><a href="#" class="btn btn-outline"><img
-                    src="../assets/images/img_addshoppingcart24dp1f1f1ffill0wght300grad25opsz24_1.svg" alt="Cart"
-                    width="24" height="24" /> Cart </a><a href="#" class="btn btn-primary"><img
-                    src="../assets/images/img_shoppingbagspeed24dp1f1f1ffill0wght300grad25opsz24_1.svg" alt="Shop"
-                    width="24" height="24" /> Shop </a></div>
+        <nav class="nav-menu"><a href="#" class="nav-item active">Home</a><a href="#" class="nav-item">Shop <img
+                    src="../assets/images/down arrow.png" alt="Down arrow" width="16" height="16"
+                    class="icon-down" /></a><a href="#" class="nav-item">About Us</a><a href="#"
+                class="nav-item">Faqs</a></nav>
+        <div class="header-actions">
+            <a href="#" class="btn btn-outline">
+                <img src="../assets/images/img_addshoppingcart24dp1f1f1ffill0wght300grad25opsz24_1.svg" alt="Cart"
+                    width="24" height="24" />
+                Cart
+            </a>
+
+            <a href="#" class="btn btn-primary">
+                <img src="../assets/images/img_shoppingbagspeed24dp1f1f1ffill0wght300grad25opsz24_1.svg" alt="Shop"
+                    width="24" height="24" />
+                Shop
+            </a>
+        </div>
+
     </header>
     <main>
         <section class="hero-section">
@@ -2152,6 +2180,8 @@
                                     </div>
                                 </div>
                             </article>
+
+
                         </div>
                         <div class="slider-controls" id="sliderControls">
                             <div class="slider-dot active"></div>
