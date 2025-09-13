@@ -225,7 +225,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 60px;
             position: relative;
             z-index: 2;
         }
@@ -302,6 +302,7 @@
         /* Feature Products Section */
         .feature-products {
             text-align: center;
+            padding: 60px;
         }
 
         .section-title {
@@ -353,12 +354,37 @@
             border-bottom-color: #a60f08;
         }
 
-        .products-grid {
+        .products-grid-tab-content {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 32px;
+            gap: 15px;
             margin-top: 40px;
         }
+
+
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tab-item {
+            cursor: pointer;
+            padding: 10px 16px;
+            display: inline-block;
+            color: #333;
+        }
+
+        .tab-item.active {
+            font-weight: bold;
+            border-bottom: 2px solid #A60F08;
+        }
+
 
         .product-card {
             border: 1px solid #c1c1c1;
@@ -708,6 +734,10 @@
                 font-size: 24px;
             }
 
+            .slider-arrow {
+                display: none !important;
+            }
+
             .discount-text {
                 font-size: 40px;
             }
@@ -914,7 +944,7 @@
 
         /* Solutions Section */
         .solutions-section {
-            padding: 0px 16px;
+            padding: 60px 16px;
             text-align: center;
         }
 
@@ -1011,7 +1041,7 @@
 
         /* Testimonials Section */
         .testimonials-section {
-            padding: 30px 16px;
+            padding: 60px 16px;
             text-align: center;
         }
 
@@ -1102,6 +1132,7 @@
 
         .slider-controls {
             display: flex;
+            /* position: sticky; */
             justify-content: center;
             gap: 8px;
             margin-top: 24px;
@@ -1184,10 +1215,22 @@
                 /* Slightly taller on mobile for better text display */
             }
 
+
+            .testimonial-card {
+                flex: 0 0 80%;
+                /* show 1 card mostly in view */
+                scroll-snap-align: start;
+            }
+
             .testimonials-container {
                 gap: 20px;
                 padding: 0 8px;
             }
+
+            .slider-arrow {
+                display: none !important;
+            }
+
 
             .slider-arrow.left {
                 left: 4px;
@@ -1891,10 +1934,12 @@
             <div class="max-width-container">
                 <h2 class="section-title">Feature Products</h2>
                 <p class="section-description">Explore our innovative hair color solutions today!</p>
-                <div class="product-tabs"><a href="#" class="tab-item active">Temporary Hair Color</a><a href="#"
-                        class="tab-item">Gray Root Touch Up</a><a href="#" class="tab-item">Color-Depositing Shampoo &
-                        Conditioner</a></div>
-                <div class="products-grid">
+                <div class="product-tabs">
+                    <a href="#" class="tab-item active" data-target="tab1">Temporary Hair Color</a>
+                    <a href="#" class="tab-item" data-target="tab2">Gray Root Touch Up</a>
+                    <a href="#" class="tab-item" data-target="tab3">Shampoo & Conditioner</a>
+                </div>
+                <div class="products-grid tab-content active" id="tab1">
                     <div>
                         <article class="product-card"><img src="../assets/images/img_image_2.png"
                                 alt="TouchBack PRO Bold hair color product" class="product-image" />
@@ -1965,9 +2010,65 @@
                             </button>
                         </div>
                     </div>
-
-
                 </div>
+
+
+
+
+                <div class="products-grid tab-content" id="tab2">
+                    <div>
+                        <article class="product-card"><img src="../assets/images/img_image_2.png"
+                                alt="TouchBack PRO Bold hair color product" class="product-image" />
+                        </article>
+
+                        <div class="products-description">
+                            <h3 class="product-title">TouchBack PRO</h3>
+                            <p class="product-subtitle">Bold</p>
+                            <div class="product-rating"><img src="../assets/images/img_vector.svg" alt="Star"
+                                    class="star" /><img src="../assets/images/img_vector.svg" alt="Star"
+                                    class="star" /><img src="../assets/images/img_vector.svg" alt="Star"
+                                    class="star" /><img src="../assets/images/img_vector.svg" alt="Star"
+                                    class="star" /><img src="../assets/images/img_vector.svg" alt="Star"
+                                    class="star" /><span class="rating-text">(127 reviews)</span></div>
+                            <p class="product-price">$55</p>
+                            <button class="product-btn">
+                                <img src="../assets/images/img_addshoppingcart24dp1f1f1ffill0wght300grad25opsz24_1_white_a700.svg"
+                                    alt="Add to cart" width="30" height="30" />
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🔹 Third Tab Content -->
+                <div class="products-grid tab-content" id="tab3">
+                    <div>
+                        <article class="product-card"><img src="../assets/images/img_image_4.png"
+                                alt="TouchBack PRO Bold hair color product" class="product-image" />
+                        </article>
+
+                        <div class="products-description">
+                            <h3 class="product-title">TouchBack Shampoo & Conditioner</h3>
+                            <p class="product-subtitle">Nourishing</p>
+                            <div class="product-rating"><img src="../assets/images/img_vector.svg" alt="Star"
+                                    class="star" /><img src="../assets/images/img_vector.svg" alt="Star"
+                                    class="star" /><img src="../assets/images/img_vector.svg" alt="Star"
+                                    class="star" /><img src="../assets/images/img_vector.svg" alt="Star"
+                                    class="star" /><img src="../assets/images/img_vector.svg" alt="Star"
+                                    class="star" /><span class="rating-text">(127 reviews)</span></div>
+                            <p class="product-price">$55</p>
+                            <button class="product-btn">
+                                <img src="../assets/images/img_addshoppingcart24dp1f1f1ffill0wght300grad25opsz24_1_white_a700.svg"
+                                    alt="Add to cart" width="30" height="30" />
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </section>
 
@@ -2087,11 +2188,12 @@
                 <div class="testimonial_box">
                     <button class="slider-arrow left" onclick="slideLeft()">
                         <!-- Using CSS arrows instead of images for better compatibility -->
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <!-- <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
                             <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.9)" stroke="#ddd" />
                             <path d="M28 16l-8 8 8 8" stroke="#333" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
-                        </svg>
+                        </svg> -->
+                        <img src="../assets/images/Slider left.png" alt="Previous" class="arrow-icon" />
                     </button>
                     <div class="testimonials-slider">
                         <div class="testimonials-container" id="testimonialsContainer">
@@ -2190,11 +2292,12 @@
                         </div>
                     </div>
                     <button class="slider-arrow right" onclick="slideRight()">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <!-- <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
                             <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.9)" stroke="#ddd" />
                             <path d="M20 16l8 8-8 8" stroke="#333" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
-                        </svg>
+                        </svg> -->
+                        <img src="../assets/images/Slider right.png" alt="Previous" class="arrow-icon" />
                     </button>
                 </div>
             </div>
@@ -2291,10 +2394,11 @@
                 this.cards = document.querySelectorAll('.testimonial-card');
                 this.currentSlide = 0;
                 this.cardsPerView = this.getCardsPerView();
-                this.totalSlides = Math.max(0, this.cards.length - this.cardsPerView);
+                this.totalSlides = Math.ceil(this.cards.length / this.cardsPerView) - 1; // ✅ total pages - 1
 
                 this.updateDots();
                 this.updateArrowsVisibility();
+                // this.addTouchSupport();
 
                 // Handle window resize
                 window.addEventListener('resize', () => {
@@ -2309,6 +2413,28 @@
                     }
                 });
             }
+
+
+            // addTouchSupport() {
+            //     let startX = 0;
+
+            //     this.container.addEventListener('touchstart', (e) => {
+            //         startX = e.touches[0].clientX;
+            //     });
+
+            //     this.container.addEventListener('touchend', (e) => {
+            //         const endX = e.changedTouches[0].clientX;
+            //         const diff = startX - endX;
+
+            //         if (Math.abs(diff) > 50) { // swipe threshold
+            //             if (diff > 0) {
+            //                 this.slideRight(); // swipe left → next
+            //             } else {
+            //                 this.slideLeft();  // swipe right → prev
+            //             }
+            //         }
+            //     });
+            // }
 
             getCardsPerView() {
                 const width = window.innerWidth;
@@ -2355,10 +2481,9 @@
                     rightArrow.style.display = 'flex';
                 }
             }
-
             slideLeft() {
                 if (this.currentSlide > 0) {
-                    this.currentSlide = Math.max(0, this.currentSlide - this.cardsPerView);
+                    this.currentSlide--;
                     this.updateSlider();
                     this.updateActiveDot();
                 }
@@ -2366,7 +2491,7 @@
 
             slideRight() {
                 if (this.currentSlide < this.totalSlides) {
-                    this.currentSlide = Math.min(this.totalSlides, this.currentSlide + this.cardsPerView);
+                    this.currentSlide++;
                     this.updateSlider();
                     this.updateActiveDot();
                 }
@@ -2380,10 +2505,8 @@
 
             updateActiveDot() {
                 const dots = document.querySelectorAll('.slider-dot');
-                const activeDotIndex = Math.floor(this.currentSlide / this.cardsPerView);
-
                 dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === activeDotIndex);
+                    dot.classList.toggle('active', index === this.currentSlide);
                 });
             }
         }
@@ -2445,6 +2568,28 @@
             const walk = (x - startX) * 1.5;
             slider1.scrollLeft = scrollLeft - walk;
         });
+
+
+
+
+
+        document.querySelectorAll('.tab-item').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Remove active state from tabs
+                document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Hide all product grids
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+                // Show target grid
+                const targetId = tab.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
 
     </script>
 
