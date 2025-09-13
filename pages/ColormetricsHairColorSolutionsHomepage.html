@@ -57,6 +57,35 @@
             width: 100%;
         }
 
+        section.hero-section:after {
+            content: "";
+            background-image: url("../assets/images/img_group_pink_900.svg");
+            width: 544px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-repeat: no-repeat;
+        }
+
+
+        section.hero-section:before {
+            content: "";
+            background-image: url("../assets/images/img_group.svg");
+            width: 250px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            right: 0;
+            opacity: 10;
+            top: 0;
+            background-repeat: no-repeat;
+            z-index: -1;
+            /* keep it behind everything */
+            opacity: 1;
+        }
+
         .logo {
             width: 120px;
             height: auto;
@@ -225,7 +254,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 60px;
+            padding: 20px;
+            margin-top: 40px;
             position: relative;
             z-index: 2;
         }
@@ -302,7 +332,7 @@
         /* Feature Products Section */
         .feature-products {
             text-align: center;
-            padding: 60px;
+            margin-top: 40px;
         }
 
         .section-title {
@@ -361,7 +391,16 @@
             margin-top: 40px;
         }
 
+        /* .feature-products section{
+            background: linear-gradient(to bottom right, #aa2448, #1ca7a7);
+           
+        } */
 
+        .feature-products {
+            background: radial-gradient(circle at top left, #faedf0 0%, transparent 60%),
+                radial-gradient(circle at bottom center, #eafdfd 20%, transparent 60%);
+            /* padding: 60px 20px; */
+        }
 
         .tab-content {
             display: none;
@@ -727,7 +766,7 @@
 
         @media (max-width: 480px) {
             .offers-content {
-                padding: 24px 16px;
+                padding: 24px 0px;
             }
 
             .offers-title {
@@ -944,7 +983,7 @@
 
         /* Solutions Section */
         .solutions-section {
-            padding: 60px 16px;
+            /* padding: 60px 16px; */
             text-align: center;
         }
 
@@ -1039,14 +1078,9 @@
             color: #000000;
         }
 
-        /* Testimonials Section */
-        .testimonials-section {
-            padding: 60px 16px;
-            text-align: center;
-        }
 
         .testimonials-section {
-            padding: 30px 16px;
+            padding: 80px 16px;
             text-align: center;
         }
 
@@ -1205,7 +1239,7 @@
 
         @media (max-width: 768px) {
             .testimonials-section {
-                padding: 20px 8px;
+                margin-top: 40px;
             }
 
             .testimonial-card {
@@ -1255,12 +1289,7 @@
         @media (max-width: 480px) {
 
             .before-after.section {
-                padding: 40px 12px;
-            }
-
-            .before-after-container {
-                padding: 40px 12px;
-                gap: 30px;
+                padding: 40px 0px;
             }
 
             .before-after-container .before-after-content {
@@ -1854,26 +1883,28 @@
 </head>
 
 <body>
-    <header class="header"><img src="../assets/images/ColorMetrics logo.png" alt="Colormetrics Logo" class="logo" />
-        <nav class="nav-menu"><a href="#" class="nav-item active">Home</a><a href="#" class="nav-item">Shop <img
-                    src="../assets/images/down arrow.png" alt="Down arrow" width="16" height="16"
-                    class="icon-down" /></a><a href="#" class="nav-item">About Us</a><a href="#"
-                class="nav-item">Faqs</a></nav>
-        <div class="header-actions">
-            <a href="#" class="btn btn-outline">
-                <img src="../assets/images/img_addshoppingcart24dp1f1f1ffill0wght300grad25opsz24_1.svg" alt="Cart"
-                    width="24" height="24" />
-                Cart
-            </a>
+    <section class="hero-header">
+        <header class="header"><img src="../assets/images/ColorMetrics logo.png" alt="Colormetrics Logo" class="logo" />
+            <nav class="nav-menu"><a href="#" class="nav-item active">Home</a><a href="#" class="nav-item">Shop <img
+                        src="../assets/images/down arrow.png" alt="Down arrow" width="16" height="16"
+                        class="icon-down" /></a><a href="#" class="nav-item">About Us</a><a href="#"
+                    class="nav-item">Faqs</a></nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">
+                    <img src="../assets/images/img_addshoppingcart24dp1f1f1ffill0wght300grad25opsz24_1.svg" alt="Cart"
+                        width="24" height="24" />
+                    Cart
+                </a>
 
-            <a href="#" class="btn btn-primary">
-                <img src="../assets/images/img_shoppingbagspeed24dp1f1f1ffill0wght300grad25opsz24_1.svg" alt="Shop"
-                    width="24" height="24" />
-                Shop
-            </a>
-        </div>
+                <a href="#" class="btn btn-primary">
+                    <img src="../assets/images/img_shoppingbagspeed24dp1f1f1ffill0wght300grad25opsz24_1.svg" alt="Shop"
+                        width="24" height="24" />
+                    Shop
+                </a>
+            </div>
 
-    </header>
+        </header>
+    </section>
     <main>
         <section class="hero-section">
             <div class="hero-content">
