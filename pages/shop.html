@@ -7,8 +7,140 @@
 <body>
     <div id="navbar"></div>
     <main>
-        <h1>Shop</h1>
-        <p>All products listed here...</p>
+
+        <div class="product-slider-container">
+            <div class="product-slider" id="product-slider">
+                <!-- Slide 1 -->
+                <div class="product-slide product-slide-1">
+                    <div class="product-slide-content product-content-left">
+                        <div class="product-text-section">
+                            <h1>Color Between Colorings.</h1>
+                            <p>Discover our revolutionary hair coloring system that gives you perfect color balance
+                                between treatments.</p>
+                            <button class="product-cta-button">Shop Now</button>
+                        </div>
+                        <div class="product-image-section">
+                            <svg class="product-model-image" viewBox="0 0 350 500"
+                                style="background: #ff6b6b; border-radius: 20px;">
+                                <rect width="350" height="500" fill="#ff6b6b" rx="20" />
+                                <circle cx="175" cy="150" r="60" fill="#fff" opacity="0.3" />
+                                <rect x="125" y="250" width="100" height="150" rx="50" fill="#fff" opacity="0.3" />
+                                <text x="175" y="420" text-anchor="middle" fill="white" font-size="14">Model
+                                    Image</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="product-slide product-slide-2">
+                    <div class="product-slide-content product-content-right">
+                        <div class="product-text-section">
+                            <h1>Premium Hair Care</h1>
+                            <p>Professional-grade formulas that nourish and protect your hair while delivering stunning
+                                color results.</p>
+                            <button class="product-cta-button">Learn More</button>
+                        </div>
+                        <div class="product-image-section">
+                            <svg class="product-product-image" viewBox="0 0 300 400">
+                                <rect x="100" y="50" width="60" height="200" rx="30" fill="#4ecdc4" stroke="#fff"
+                                    stroke-width="3" />
+                                <rect x="140" y="50" width="60" height="180" rx="30" fill="#45b7aa" stroke="#fff"
+                                    stroke-width="3" />
+                                <rect x="75" y="270" width="150" height="80" rx="40" fill="#96ceb4" stroke="#fff"
+                                    stroke-width="3" />
+                                <text x="150" y="370" text-anchor="middle" fill="white" font-size="12">Hair
+                                    Products</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="product-slide product-slide-3">
+                    <div class="product-slide-content product-content-left">
+                        <div class="product-text-section">
+                            <h1>Natural Beauty</h1>
+                            <p>Enhance your natural beauty with our organic, sulfate-free formulations that care for
+                                your hair.</p>
+                            <button class="product-cta-button">Discover</button>
+                        </div>
+                        <div class="product-image-section">
+                            <svg class="product-model-image" viewBox="0 0 350 500"
+                                style="background: #4facfe; border-radius: 20px;">
+                                <rect width="350" height="500" fill="#4facfe" rx="20" />
+                                <circle cx="175" cy="150" r="60" fill="#fff" opacity="0.4" />
+                                <rect x="125" y="250" width="100" height="150" rx="50" fill="#fff" opacity="0.4" />
+                                <text x="175" y="420" text-anchor="middle" fill="white" font-size="14">Model
+                                    Image</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="product-slide product-slide-4">
+                    <div class="product-slide-content product-content-right">
+                        <div class="product-text-section">
+                            <h1>Salon Quality</h1>
+                            <p>Bring the salon experience home with our professional-grade color treatments and styling
+                                products.</p>
+                            <button class="product-cta-button">Shop Collection</button>
+                        </div>
+                        <div class="product-image-section">
+                            <svg class="product-product-image" viewBox="0 0 300 400">
+                                <rect x="80" y="50" width="50" height="180" rx="25" fill="#43e97b" stroke="#fff"
+                                    stroke-width="3" />
+                                <rect x="130" y="40" width="50" height="200" rx="25" fill="#38f9d7" stroke="#fff"
+                                    stroke-width="3" />
+                                <rect x="180" y="60" width="50" height="160" rx="25" fill="#43e97b" stroke="#fff"
+                                    stroke-width="3" />
+                                <rect x="60" y="280" width="180" height="70" rx="35" fill="#7bed9f" stroke="#fff"
+                                    stroke-width="3" />
+                                <text x="150" y="380" text-anchor="middle" fill="white" font-size="12">Product
+                                    Line</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="product-slide product-slide-5">
+                    <div class="product-slide-content product-content-left">
+                        <div class="product-text-section">
+                            <h1>Vibrant Colors</h1>
+                            <p>Express yourself with our vibrant color collection. Long-lasting, fade-resistant formulas
+                                for bold looks.</p>
+                            <button class="product-cta-button">Get Started</button>
+                        </div>
+                        <div class="product-image-section">
+                            <svg class="product-model-image" viewBox="0 0 350 500"
+                                style="background: #fa709a; border-radius: 20px;">
+                                <rect width="350" height="500" fill="#fa709a" rx="20" />
+                                <circle cx="175" cy="150" r="60" fill="#fff" opacity="0.3" />
+                                <rect x="125" y="250" width="100" height="150" rx="50" fill="#fff" opacity="0.3" />
+                                <text x="175" y="420" text-anchor="middle" fill="white" font-size="14">Model
+                                    Image</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation arrows -->
+            <div class="product-arrow product-arrow-left" onclick="productPrevSlide()"></div>
+            <div class="product-arrow product-arrow-right" onclick="productNextSlide()"></div>
+
+            <!-- Navigation dots -->
+            <div class="product-navigation">
+                <div class="product-nav-dot active" onclick="productCurrentSlide(1)"></div>
+                <div class="product-nav-dot" onclick="productCurrentSlide(2)"></div>
+                <div class="product-nav-dot" onclick="productCurrentSlide(3)"></div>
+                <div class="product-nav-dot" onclick="productCurrentSlide(4)"></div>
+                <div class="product-nav-dot" onclick="productCurrentSlide(5)"></div>
+            </div>
+        </div>
+
     </main>
 
     <div id="footer"></div>
@@ -16,4 +148,63 @@
     <script src="../js/navbar.js"></script>
     <script src="../js/footer.js"></script>
 
-</body> 
+    <script>
+        let productCurrentSlideIndex = 0;
+        const productTotalSlides = 5;
+        const productSlider = document.getElementById('product-slider');
+        const productNavDots = document.querySelectorAll('.product-nav-dot');
+
+        function productUpdateSlider() {
+            const translateX = -productCurrentSlideIndex * 20;
+            productSlider.style.transform = `translateX(${translateX}%)`;
+
+            productNavDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === productCurrentSlideIndex);
+            });
+        }
+
+        function productNextSlide() {
+            productCurrentSlideIndex = (productCurrentSlideIndex + 1) % productTotalSlides;
+            productUpdateSlider();
+        }
+
+        function productPrevSlide() {
+            productCurrentSlideIndex = (productCurrentSlideIndex - 1 + productTotalSlides) % productTotalSlides;
+            productUpdateSlider();
+        }
+
+        function productCurrentSlide(index) {
+            productCurrentSlideIndex = index - 1;
+            productUpdateSlider();
+        }
+
+        // Auto-play slider
+        setInterval(productNextSlide, 5000);
+
+        // Touch/swipe support
+        let productStartX = 0;
+        let productEndX = 0;
+
+        productSlider.addEventListener('touchstart', e => {
+            productStartX = e.changedTouches[0].screenX;
+        });
+
+        productSlider.addEventListener('touchend', e => {
+            productEndX = e.changedTouches[0].screenX;
+            productHandleSwipe();
+        });
+
+        function productHandleSwipe() {
+            const threshold = 50;
+            const diff = productStartX - productEndX;
+
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    productNextSlide();
+                } else {
+                    productPrevSlide();
+                }
+            }
+        }
+    </script>
+</body>
