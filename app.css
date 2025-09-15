@@ -1848,9 +1848,9 @@
          overflow: visible;
      }
 
-     .testimonial-card {
+     /* .testimonial-card {
          flex: 0 0 385px;
-     }
+     } */
 
      .image-gallery-about-us {
          margin: 90px auto 0 auto;
@@ -1880,6 +1880,10 @@
      .before-after-section-description {
          font-size: 16px;
          /* Back to original size */
+     }
+
+     .footer-link {
+         font-size: 17px;
      }
  }
 
