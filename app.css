@@ -61,7 +61,7 @@
      left: 0;
      width: 250px;
      height: 100%;
-     background: url("../assets/images/img_group_pink_900.svg") no-repeat left top;
+     background: url("./assets/images/img_group_pink_900.svg") no-repeat left top;
      background-size: auto 100%;
      z-index: -1;
      opacity: 0.8;
@@ -69,7 +69,7 @@
 
  .nav-menu:after {
      content: "";
-     background-image: url("../assets/images/img_group.svg");
+     background-image: url("./assets/images/img_group.svg");
      width: 250px;
      height: 100%;
      display: block;
