@@ -1221,12 +1221,12 @@
  }
 
  .slider-arrow.left {
-     left: -50px;
+     left: -40px;
      /* Kept your original 8px */
  }
 
  .slider-arrow.right {
-     right: -50px
+     right: -40px
          /* Kept your original 8px */
  }
 
