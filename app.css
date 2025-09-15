@@ -292,8 +292,8 @@
  }
 
  .hero-image {
-     width: 416px;
-     height: 340px;
+     width: 400px;
+     height: 320px;
      border-radius: 60px;
      object-fit: cover;
      flex-shrink: 0;
@@ -1517,15 +1517,32 @@
 
  /* Newsletter Section */
  .newsletter-section {
-     background-image: url('./assets/images/img_.png');
+     position: relative;
+     background: url('./assets/images/img_.png');
      background-size: cover;
      background-position: center;
      padding: 112px 16px;
      text-align: center;
+     overflow: hidden;
      color: #ffffff;
  }
 
+ .newsletter-section::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: #000000B2;
+     /* black with opacity */
+     z-index: 0;
+ }
+
+
  .newsletter-content {
+     position: relative;
+     z-index: 1;
      width: 100%;
      max-width: 768px;
      margin: 0 auto;
@@ -1828,8 +1845,8 @@
 
      .before-after-image {
          flex: 0 0 auto;
-         max-width: 704px;
-         max-height: 620px;
+         max-width: 700px;
+         max-height: 600px;
      }
 
      .before-after-container .before-after-content {
@@ -1973,9 +1990,15 @@
 
  .product-slider-container {
      width: 100%;
-     height: 100vh;
-     overflow: hidden;
+     max-width: 1532px;
+     height: auto;
+     min-height: 370px;
+     margin: 300px auto 0 auto;
      position: relative;
+     opacity: 1;
+     left: 0;
+     padding: 0 16px;
+     box-sizing: border-box;
  }
 
  .product-slider {
@@ -2025,9 +2048,9 @@
      flex-direction: row;
  }
 
- .product-content-right {
+ /* .product-content-right {
      flex-direction: row-reverse;
- }
+ } */
 
  .product-text-section {
      flex: 1;
@@ -2177,10 +2200,11 @@
  }
 
  @media (max-width: 768px) {
-     .product-slide-content {
-         flex-direction: column !important;
-         padding: 2rem;
-         text-align: center;
+     .product-slider-container {
+         max-width: 100%;
+         margin-top: 120px;
+         min-height: 280px;
+         padding: 0 12px;
      }
 
      .product-text-section {
@@ -2199,5 +2223,22 @@
      .product-product-image {
          width: 200px;
          height: 300px;
+     }
+ }
+
+
+ @media (max-width: 1024px) {
+     .product-slider-container {
+         max-width: 90%;
+         margin-top: 200px;
+         min-height: 320px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .product-slider-container {
+         margin-top: 80px;
+         min-height: 240px;
+         padding: 0 8px;
      }
  }
