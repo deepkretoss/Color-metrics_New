@@ -465,20 +465,13 @@
  .products-description {
      width: 100%;
      max-width: 394px;
-     /* matches Figma width */
      height: 200px;
-     /* spacing inside */
      box-sizing: border-box;
-     /* ensures padding doesn’t overflow */
-     /* background: #fff; */
-     /* optional, can be changed */
      border-radius: 12px;
-     /* optional, if Figma shows rounded corners */
      display: flex;
      flex-direction: column;
      justify-content: space-between;
      align-items: flex-start;
-     /* evenly distribute content */
  }
 
  .product-btn {
@@ -818,7 +811,7 @@
  /* Slider handle image */
  .slider-handle {
      position: absolute;
-     top: 50%;
+     top: 32%;
      left: var(--position);
      z-index: 4;
      transform: translate(-50%, -50%);
