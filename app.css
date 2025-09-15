@@ -1517,7 +1517,7 @@
 
  /* Newsletter Section */
  .newsletter-section {
-     background-image: url('../assets/images/img_.png');
+     background-image: url('./assets/images/img_.png');
      background-size: cover;
      background-position: center;
      padding: 112px 16px;
